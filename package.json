@@ -1,0 +1,25 @@
+{
+  "name": "stamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelrosario/stamp-site.git"
+  },
+  "author": "Michael Rosario",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelrosario/stamp-site/issues"
+  },
+  "homepage": "https://github.com/michaelrosario/stamp-site#readme"
+}
+
