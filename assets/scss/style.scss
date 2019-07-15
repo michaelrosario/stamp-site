@@ -20,6 +20,9 @@ $gray: #9B9B9B;
     display: block; 
     text-align: center;
 }
+.text-small {
+    font-size: 14px;
+}
 .text-large { 
     opacity: 0.8;
     font-size: 22px; 
@@ -141,12 +144,17 @@ body,html {
     display: block;
     margin: 15% auto; 
     .slogan {
-        padding: 10px 0 0 0;
+        padding: 10px 0 15px 0;
+        max-width: 430px;
         img { 
             width: 100%;
             max-width: 430px;
             height: auto !important;
         }
+    }
+    .slogan-text {
+        width: 100%;
+        max-width: 450px;
     }
     .column1 { 
         float: left; 
@@ -167,10 +175,12 @@ body,html {
         }
     }
 
-    .slogan { margin: 0 0 15px 0; }
-
     #signup {
-        h5 { letter-spacing: 0.09em;  font-size: 20px; }
+        h5 { 
+            font-family: AvenirNext-DemiBold,"Roboto", sans-serif;
+            letter-spacing: 0.09em;  
+            font-size: 20px; 
+        }
         .signup-content {
             margin: 30px auto;
             background: rgba(255,255,255,0.05);
@@ -214,9 +224,13 @@ body,html {
                         height: 100%;
                         background: transparent;
                         border: none; 
-                        color: #FFF;
-                        font-size: 22px;
+                        color: rgba(255,255,255,0.7);
+                        font-size: 18px;
                         padding-left: 130px;
+                        transition: all linear 0.3s;
+                        &:focus {
+                            color: rgba(255,255,255,1);
+                        }
                     }
                 }
             }
@@ -235,6 +249,73 @@ body,html {
                 text-decoration: none; 
             }
         }
+    }
+}
+
+footer { 
+    padding: 100px 0 30px 0;
+    display: block; 
+    clear: both;
+    width: 100%;
+    color: $white;
+    .footer-content { 
+        margin: 0px auto 0;
+        width: 90%;
+        display: block;
+        max-width: $content-width;
+    }
+    .footer-menu { 
+        float: right;
+        text-transform: uppercase;
+        font-family: AvenirNext-DemiBold,"Roboto", sans-serif;
+        padding: 0;
+        margin: 0;
+        li { display: inline; }
+        a { 
+            color: $white; 
+            text-decoration: none;
+            letter-spacing: 2px;
+            padding: 0 15px;
+        }
+    }
+
+    @media(max-width: 990px){
+
+        .footer-menu { 
+            a { 
+                padding: 0 10px;
+            }
+        }
+
+    }
+
+    @media(max-width: 870px){
+        .footer-content { 
+            font-size: 12px;
+        }
+
+        .footer-menu { 
+            a { 
+                padding: 0 10px;
+            }
+        }
+
+    }
+    @media(max-width: 767px){
+        text-align: center;
+        .footer-content { 
+            font-size: 12px;
+        }
+
+        .footer-menu { 
+            float: none;
+            margin: 30px auto;
+            a { 
+                line-height: 20px;
+                padding: 0 10px;
+            }
+        }
+
     }
 }
 
